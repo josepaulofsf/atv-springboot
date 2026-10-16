@@ -30,10 +30,8 @@ public class Livro {
     @JsonProperty("edicao")
     private String edicao;
 
-    /*@Column(name = "ds_idAutor", nullable = false)
-    @JsonProperty("idAutor")
-    private Long idAutor;
-    FALTA ESTRUTURAR A RELAÇÃO
-    */
+    @ManyToOne 
+    @JoinColumn(name = "ds_idAutor")
+    private Autor autor;
 
 }
